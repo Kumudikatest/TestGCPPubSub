@@ -8,7 +8,7 @@ exports.handler = function (event, context, callback) {
 		topic: `projects/${process.env.GCLOUD_PROJECT_ID}/topics/SigmaOutgoingMessage`,
 		resource: {
 			messages: [{
-				data: `Test`,
+				data: `SGVsbG8gV29ybGQ=`,
 				attributes: {}
 			}]
 		}
