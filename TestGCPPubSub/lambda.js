@@ -7,7 +7,10 @@ exports.handler = function (event, context, callback) {
 	pubsub.projects.topics.publish({
 		topic: `projects/${process.env.GCLOUD_PROJECT_ID}/topics/SigmaOutgoingMessage`,
 		resource: {
-			messages: [{ data: `SGVsbG8gV29ybGQ=`, attributes: {} }]
+			messages: [{
+				data: `Test`,
+				attributes: {}
+			}]
 		}
 	})
 		.then(response => {
